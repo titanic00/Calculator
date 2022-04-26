@@ -12,8 +12,8 @@
         "plus minus multiply divide"
         "one two three open"
         "four five six close"
-        "seven eight nine comma"
-        "zero zero zero equal";
+        "seven eight nine equal"
+        "comma zero cl equal";
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
@@ -41,6 +41,13 @@
 }
 
 #del {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+#clear {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,4 +128,8 @@
 
 #del {
     grid-area: del;
+}
+
+#clear {
+    grid-area: cl;
 }

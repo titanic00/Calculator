@@ -8,7 +8,6 @@ for (let i = 0; i < number.length; i++) {
             if (number[i].innerHTML == '=') {
                 document.getElementById('text').innerHTML = eval(expression);
                 expression = '';
-                return;
             }
         } catch {
             document.getElementById('text').innerHTML = 'Invalid expression';
@@ -23,4 +22,9 @@ for (let i = 0; i < number.length; i++) {
 document.getElementById('del').addEventListener('click', () => {
     expression = expression.replace(expression[expression.length - 1], '');
     document.getElementById('text').innerHTML = expression;
-})
+});
+
+document.getElementById('clear').addEventListener('click', () => {
+    expression = '';
+    document.getElementById('text').innerHTML = expression;
+});
