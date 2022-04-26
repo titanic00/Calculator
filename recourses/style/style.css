@@ -1,0 +1,102 @@
+.container {
+    width: 350px;
+    height: 500px;
+    font-size: 2em;
+    border: 1px solid black;
+    margin: auto;
+    position: relative;
+    top: 100px;
+    display: grid;
+    grid-template-areas:
+        "text text text text"
+        "plus minus multiply divide"
+        "one two three open"
+        "four five six close"
+        "seven eight nine equal"
+        "zero zero zero equal";
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.element {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#text {
+    border: 1px solid black;
+    grid-area: text;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+#plus {
+    grid-area: plus;
+}
+
+#minus {
+    grid-area: minus;
+}
+
+#multiply {
+    grid-area: multiply;
+}
+
+#divide {
+    grid-area: divide;
+}
+
+#one {
+    grid-area: one;
+}
+
+#two {
+    grid-area: two;
+}
+
+#three {
+    grid-area: three;
+}
+
+#open {
+    grid-area: open;
+}
+
+#four {
+    grid-area: four;
+}
+
+#five {
+    grid-area: five;
+}
+
+#six {
+    grid-area: six;
+}
+
+#close {
+    grid-area: close;
+}
+
+#seven {
+    grid-area: seven;
+}
+
+#eight {
+    grid-area: eight;
+}
+
+#nine {
+    grid-area: nine;
+}
+
+#equal {
+    grid-area: equal;
+}
+
+#zero {
+    grid-area: zero;
+}
