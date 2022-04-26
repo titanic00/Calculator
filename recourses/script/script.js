@@ -4,8 +4,14 @@ const number = document.querySelectorAll('.element');
 
 for (let i = 0; i < number.length; i++) {
     number[i].addEventListener('click', function handler() {
-        if (number[i].innerHTML == '=') {
-            document.getElementById('text').innerHTML = eval(expression);
+        try {
+            if (number[i].innerHTML == '=') {
+                document.getElementById('text').innerHTML = eval(expression);
+                expression = '';
+                return;
+            }
+        } catch {
+            document.getElementById('text').innerHTML = 'Invalid expression';
             expression = '';
             return;
         }
