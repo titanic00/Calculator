@@ -1,30 +1,49 @@
 let expression = '';
+let nextExpression = '';
 
 const number = document.querySelectorAll('.element');
+const textField = document.getElementById('text');
 
 for (let i = 0; i < number.length; i++) {
     number[i].addEventListener('click', function handler() {
         try {
-            if (number[i].innerHTML == '=') {
-                document.getElementById('text').innerHTML = eval(expression);
+            if (number[i].innerHTML === '=') {
+                nextExpression = nextExpression ? eval(nextExpression) + '' : eval(expression) + '';
+                if (!nextExpression) {
+                    throw new Error();
+                }
+                textField.innerHTML = nextExpression;
                 expression = '';
+            } else if (nextExpression !== '') {
+                nextExpression = nextExpression + number[i].innerHTML;
+                textField.innerHTML = nextExpression;
+            } else {
+                expression = expression + number[i].innerHTML;
+                textField.innerHTML = expression;
             }
         } catch {
-            document.getElementById('text').innerHTML = 'Invalid expression';
+            textField.innerHTML = 'Invalid expression';
             expression = '';
-            return;
+            nextExpression = '';
         }
-        expression = expression.concat(number[i].innerHTML);
-        document.getElementById('text').innerHTML = expression;
     });
 };
 
 document.getElementById('del').addEventListener('click', () => {
-    expression = expression.replace(expression[expression.length - 1], '');
-    document.getElementById('text').innerHTML = expression;
+    if (nextExpression) {
+        nextExpression = nextExpression.split('');
+        nextExpression.pop();
+        nextExpression = nextExpression.join('');
+    } else if (expression) {
+        expression = expression.split('');
+        expression.pop();
+        expression = expression.join('');
+    }
+    textField.innerHTML = nextExpression ? nextExpression : expression;
 });
 
 document.getElementById('clear').addEventListener('click', () => {
     expression = '';
-    document.getElementById('text').innerHTML = expression;
+    nextExpression = '';
+    textField.innerHTML = expression;
 });

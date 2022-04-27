@@ -40,18 +40,19 @@
     transform: scale(0.6);
 }
 
-#del {
+.text-n-clear {
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid black;
 }
 
-#clear {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
+.text-n-clear:active {
+    transform: scale(0.6);
+}
+
+.element:active {
+    transform: scale(0.6);
 }
 
 #plus {
