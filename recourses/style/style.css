@@ -1,144 +1,152 @@
 body {
-    background-color: antiquewhite;
+  background-color: antiquewhite;
 }
 
 .container {
-    width: 350px;
-    height: 500px;
-    font-size: 2em;
-    border: 1px solid black;
-    margin: auto;
-    position: relative;
-    top: 150px;
-    display: grid;
-    grid-template-areas:
-        "text text text del"
-        "plus minus multiply divide"
-        "one two three open"
-        "four five six close"
-        "seven eight nine equal"
-        "comma zero cl equal";
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 350px;
+  height: 500px;
+  font-size: 2em;
+  border: 1px solid black;
+  margin: auto;
+  position: relative;
+  top: 150px;
+  display: grid;
+  grid-template-areas:
+    "text text text del"
+    "plus minus multiply divide"
+    "one two three open"
+    "four five six close"
+    "seven eight nine equal"
+    "comma zero cl equal";
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 #text {
-    border: 1px solid black;
-    grid-area: text;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    overflow: scroll;
-    overflow-y: hidden;
-    overflow-x: auto;
+  border: 1px solid black;
+  grid-area: text;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  overflow: scroll;
+  overflow-y: hidden;
+  overflow-x: auto;
 }
 
 .text-n-clear,
 .element {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
 }
 
 .number,
 #text {
-    background-color: azure;
+  background-color: azure;
 }
 
 .operator {
-    background-color: rgb(144, 144, 255);
+  background-color: rgb(144, 144, 255);
 }
 
 .orange {
-    background-color: orange;
+  background-color: orange;
 }
 
 .text-n-clear:active,
 .element:active {
-    transform: scale(0.96);
+  transform: scale(0.96);
 }
 
 .element:focus {
-    background-color: red;
+  background-color: red;
 }
 
 #plus {
-    grid-area: plus;
+  grid-area: plus;
 }
 
 #minus {
-    grid-area: minus;
+  grid-area: minus;
 }
 
 #multiply {
-    grid-area: multiply;
+  grid-area: multiply;
 }
 
 #divide {
-    grid-area: divide;
+  grid-area: divide;
 }
 
 #one {
-    grid-area: one;
+  grid-area: one;
 }
 
 #two {
-    grid-area: two;
+  grid-area: two;
 }
 
 #three {
-    grid-area: three;
+  grid-area: three;
 }
 
 #open {
-    grid-area: open;
+  grid-area: open;
 }
 
 #four {
-    grid-area: four;
+  grid-area: four;
 }
 
 #five {
-    grid-area: five;
+  grid-area: five;
 }
 
 #six {
-    grid-area: six;
+  grid-area: six;
 }
 
 #close {
-    grid-area: close;
+  grid-area: close;
 }
 
 #seven {
-    grid-area: seven;
+  grid-area: seven;
 }
 
 #eight {
-    grid-area: eight;
+  grid-area: eight;
 }
 
 #nine {
-    grid-area: nine;
+  grid-area: nine;
 }
 
 #equal {
-    grid-area: equal;
+  grid-area: equal;
 }
 
 #comma {
-    grid-area: comma;
+  grid-area: comma;
 }
 
 #zero {
-    grid-area: zero;
+  grid-area: zero;
 }
 
 #del {
-    grid-area: del;
+  grid-area: del;
 }
 
 #clear {
-    grid-area: cl;
+  grid-area: cl;
+}
+
+@media only screen and (max-device-width: 500px),
+(max-device-width: 540px),
+(max-device-height: 600px) {
+  .container {
+    top: 0px;
+  }
 }
