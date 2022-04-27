@@ -9,7 +9,8 @@ for (let i = 0; i < number.length; i++) {
         try {
             if (number[i].innerHTML === '=') {
                 nextExpression = nextExpression ? eval(nextExpression) + '' : eval(expression) + '';
-                if (!nextExpression) {
+                if (nextExpression === 'undefined') {
+                    console.log(nextExpression);
                     throw new Error();
                 }
                 textField.innerHTML = nextExpression;

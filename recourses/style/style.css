@@ -1,3 +1,7 @@
+body {
+    background-color: antiquewhite;
+}
+
 .container {
     width: 350px;
     height: 500px;
@@ -5,7 +9,7 @@
     border: 1px solid black;
     margin: auto;
     position: relative;
-    top: 100px;
+    top: 150px;
     display: grid;
     grid-template-areas:
         "text text text del"
@@ -16,13 +20,6 @@
         "comma zero cl equal";
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.element {
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #text {
@@ -36,23 +33,34 @@
     overflow-x: auto;
 }
 
-.element:active {
-    transform: scale(0.6);
-}
-
-.text-n-clear {
+.text-n-clear,
+.element {
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid black;
 }
 
-.text-n-clear:active {
-    transform: scale(0.6);
+.number,
+#text {
+    background-color: azure;
 }
 
+.operator {
+    background-color: rgb(144, 144, 255);
+}
+
+.orange {
+    background-color: orange;
+}
+
+.text-n-clear:active,
 .element:active {
-    transform: scale(0.6);
+    transform: scale(0.96);
+}
+
+.element:focus {
+    background-color: red;
 }
 
 #plus {
